@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>침팬치 조련법</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #word-label {
+            font-size: 7rem;
+        }
+    </style>
+    <script>
+        function getRandomWord() {
+            var words = [
+                "fatigue",
+                "checkup",
+                "symptom",
+                "physician",
+                "diagnosis",
+                "prescribe",
+                "recovery",
+                "join",
+                "comprehensive",
+                "participate",
+                "necessary",
+                "operation",
+                "cleanliness",
+                "duration",
+                "examination",
+                "eliminate",
+                "easily",
+                "dental",
+                "dietary",
+                "transmit",
+                "periodically",
+                "coverage",
+                "exposure",
+                "pharmaceutical",
+                "premium",
+                "relieve",
+                "combination",
+                "conscious",
+                "deprivation",
+                "induce",
+                "insurance",
+                "nutrition",
+                "prevention",
+                "susceptible",
+                "uncomfortably"
+            ];
+            var randomIndex = Math.floor(Math.random() * words.length);
+            return words[randomIndex];
+        }
+
+        function updateWord() {
+            var wordLabel = document.getElementById("word-label");
+            wordLabel.innerText = getRandomWord();
+        }
+
+        setInterval(updateWord, 1000); // 1초(1000밀리초)마다 업데이트
+    </script>
+</head>
+<body>
+    <h2 id="word-label"></h2>
+</body>
+</html>
